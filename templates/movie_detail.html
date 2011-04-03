@@ -1,0 +1,8 @@
+<h1>{{ movie.title }}</h1>
+<p>{% if movie.is_loaned %}Loaned to: {{ movie.loaned_to.name }}{% endif %}</p>
+<p>{% if movie.have_watched %}Watched on {{ movie.when_watched }}{% endif %}</p>
+<p>{% if movie.length %}Length: {{ movie.length }} minutes{% endif %}</p>
+<p>{% if movie.bought_for %}Bought for ${{ movie.bought_for }}{% endif %}</p>
+<p><a href="/catalog">Return to the index</a></p>
+<br />
+<p><i>An Andy Boyle Production</i></p>

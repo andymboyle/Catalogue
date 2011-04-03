@@ -18,7 +18,7 @@ class Book(models.Model):
     title_slug = models.SlugField()
     author = models.ForeignKey(Author, blank=True, null=True)
     is_loaned = models.BooleanField()
-    loaned_to = models.ForeignKey(Person)
+    loaned_to = models.ForeignKey(Person, blank=True, null=True)
     have_read = models.BooleanField()
     started_reading = models.DateField(blank=True, null=True)
     when_finished = models.DateField(blank=True, null=True)
@@ -27,13 +27,13 @@ class Book(models.Model):
     def __unicode__(self):
         return self.title
     def get_absolute_url(self):
-        return "/media/book/%s/%s" % (self.id, self.title_slug)
+        return "/catalog/book/%s/%s" % (self.id, self.title_slug)
 
 class Movie(models.Model):
     title = models.CharField(max_length=150)
     title_slug = models.SlugField()
     is_loaned = models.BooleanField()
-    loaned_to = models.ForeignKey(Person)
+    loaned_to = models.ForeignKey(Person, blank=True, null=True)
     have_watched = models.BooleanField()
     when_watched = models.DateField(blank=True, null=True)
     length = models.IntegerField(blank=True, null=True)
@@ -41,4 +41,4 @@ class Movie(models.Model):
     def __unicode__(self):
         return self.title
     def get_absolute_url(self):
-        return "/media/movie/%s/%s" % (self.id, self.title_slug)
+        return "/catalog/movie/%s/%s" % (self.id, self.title_slug)

@@ -1,7 +1,10 @@
 <h1>My list of books and movies I own</h1>
 <p>Hey. This is an app that lists the various media I own. It's cool. You're so jealous, I know.</p>
-{% for b in books %}
+<h2>Books</h2>{% for b in books %}
 <p><a href="{{ b.get_absolute_url }}">{{ b.title }} by {{ b.author }}</a></p>{% endfor %}
 <br />
+<h2>Movies</h2>
 {% for m in movies %}
-<p><a href="{{m.get_absolute_url }}">{{ m.title }}</a></p>
+<p><a href="{{m.get_absolute_url }}">{{ m.title }}</a></p>{% endfor %}
+<br />
+<p><i>An Andy Boyle Production</i></p>
