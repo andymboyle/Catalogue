@@ -1,4 +1,4 @@
-from catalog.stuff.models import Author, Book, Movie, Person
+from catalogue.stuff.models import Author, Book, Movie, Person
 
 from django.shortcuts import render_to_response, redirect, get_list_or_404, get_object_or_404
 import urllib
