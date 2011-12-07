@@ -1,8 +1,9 @@
 <h1>{{ book.title }} by {{ book.author.name }}</h1>
 <p>{% if book.is_loaned %}Loaned to: {{ book.loaned_to.name }}{% endif %}</p>
 <p>{% if book.have_read %}Started reading on {{ book.started_reading }} and finished on {{ book.when_finished }}{% endif %}</p>
-<p>{% if book.pages %}Pages: {{ book.pages }} minutes{% endif %}</p>
+<p>{% if book.pages %}Pages: {{ book.pages }} pages{% endif %}</p>
 <p>{% if book.bought_for %}Bought for ${{ book.bought_for }}{% endif %}</p>
-<p><a href="/catalog">Return to the index</a></p>
+<p><a href="/catalogue/">Return to the index</a></p>
 <br />
-<p><i>An Andy Boyle Production</i></p>
+<h3><a href="/catalogue/currently-reading/">Currently Reading</a> | <a href="/catalogue/">Home</a></h3>
+<p><i>An <a href="http://www.andymboyle.com">Andy Boyle Production</a></i></p>

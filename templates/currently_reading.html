@@ -1,0 +1,8 @@
+<h1>Books I'm Currently Reading</h1>
+<p>Here's a list of all the books I'm currently reading. I know, you're impressed.</p>
+{% for b in books %}
+<h2>The List</h2>
+<p><a href="{{ b.get_absolute_url }}">{{ b.title }} by {{ b.author }}</a> -- started reading on {{ b.started_reading }}</p>{% endfor %}
+<br />
+<h3><a href="/catalogue/currently-reading/">Currently Reading</a> | <a href="/catalogue/">Home</a></h3>
+<p><i>An <a href="http://www.andymboyle.com">Andy Boyle Production</a></i></p>

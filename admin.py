@@ -1,5 +1,5 @@
 from django.contrib import admin
-from catalogue.stuff.models import Author, Book, Movie, Person
+from catalogue.app.models import Author, Book, Movie, Person
 
 class AuthorAdmin(admin.ModelAdmin):
     prepopulated_fields = {'name_slug': ('name', ) }
